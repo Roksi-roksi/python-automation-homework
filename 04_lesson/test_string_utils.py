@@ -1,6 +1,6 @@
 import pytest
 
-from lesson_4.string_utils import StringUtils
+from string_utils import StringUtils
 
 string_utils = StringUtils()
 
