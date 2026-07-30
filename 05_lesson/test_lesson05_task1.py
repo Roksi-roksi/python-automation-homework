@@ -25,15 +25,4 @@ def test_navigation():
     assert final_url == "https://httpbin.qa-territory.online/"
     sleep(3)
 
-    
-
-
-
-
-
-
-
-
-
-
     driver.quit()
