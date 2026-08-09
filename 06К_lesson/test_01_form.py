@@ -12,7 +12,6 @@ def test_form():
     try:
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
 
-        # 1. Заполняем поля формы
         driver.find_element(By.NAME, "first-name").send_keys("Иван")
         driver.find_element(By.NAME, "last-name").send_keys("Петров")
         driver.find_element(By.NAME, "address").send_keys("Ленина, 55-3")
