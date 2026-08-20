@@ -1,5 +1,5 @@
 from selenium import webdriver
-from calculator_page import CalculatorPage
+from calculator__page import CalculatorPage
 
 def test_slow_calculator():
     driver = webdriver.Chrome()
