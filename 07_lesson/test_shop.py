@@ -1,5 +1,5 @@
 from selenium import webdriver
-from saucedemo__pages import LoginPage, CatalogPage, CartPage, CheckoutPage
+from saucedemo_pages import LoginPage, CatalogPage, CartPage, CheckoutPage
 
 
 def test_shop_flow():
