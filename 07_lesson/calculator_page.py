@@ -38,4 +38,3 @@ class CalculatorPage:
             f"Ожидался результат '{expected_result}', "
             f"но на экране отобразилось: '{actual_result}'"
         )
-

@@ -2,19 +2,24 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
         self.TITLE = (By.CSS_SELECTOR, "span.title")
 
     def _get_title_text(self):
-        return WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located(self.TITLE)
-        ).text
+        return (
+            WebDriverWait(self.driver, 10)
+            .until(EC.visibility_of_element_located(self.TITLE))
+            .text
+        )
 
     def verify_page_title(self, expected_title: str):
         actual_title = self._get_title_text()
-        assert actual_title == expected_title, f"Ожидалась страница '{expected_title}', но мы на '{actual_title}'"
+        assert (
+            actual_title == expected_title
+        ), f"Ожидалась страница '{expected_title}', но мы на '{actual_title}'"
 
 
 class LoginPage(BasePage):
@@ -79,9 +84,12 @@ class CheckoutPage(BasePage):
         self.driver.find_element(*self.CONTINUE_BUTTON).click()
 
     def verify_total_price(self, expected_total: str):
-        actual_total = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located(self.TOTAL_LABEL)
-        ).text
+        actual_total = (
+            WebDriverWait(self.driver, 10)
+            .until(EC.visibility_of_element_located(self.TOTAL_LABEL))
+            .text
+        )
         print(f"\nИтоговая стоимость в магазине: {actual_total}")
-        assert actual_total == expected_total, f"Ожидалось '{expected_total}', но отображается '{actual_total}'"
-
+        assert (
+            actual_total == expected_total
+        ), f"Ожидалось '{expected_total}', но отображается '{actual_total}'"

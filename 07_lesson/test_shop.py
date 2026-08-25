@@ -19,7 +19,7 @@ def test_shop_flow():
         products = [
             "add-to-cart-sauce-labs-backpack",
             "add-to-cart-sauce-labs-bolt-t-shirt",
-            "add-to-cart-sauce-labs-onesie"
+            "add-to-cart-sauce-labs-onesie",
         ]
         catalog_page.add_products_to_cart(products)
         catalog_page.go_to_cart()
@@ -35,5 +35,3 @@ def test_shop_flow():
 
     finally:
         driver.quit()
-
-

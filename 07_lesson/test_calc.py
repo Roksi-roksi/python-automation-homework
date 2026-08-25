@@ -1,6 +1,7 @@
 from selenium import webdriver
 from calculator_page import CalculatorPage
 
+
 def test_slow_calculator():
     driver = webdriver.Chrome()
     driver.maximize_window()
@@ -14,5 +15,3 @@ def test_slow_calculator():
 
     finally:
         driver.quit()
-
-
