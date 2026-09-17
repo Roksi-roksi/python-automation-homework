@@ -63,4 +63,4 @@ powershell -ExecutionPolicy Bypass -File .\run.ps1
 
 4. **Просмотр уже сгенерированного HTML-отчета из папки:**
    ```bash
-   allure open final-report
+   allure open final-report 
